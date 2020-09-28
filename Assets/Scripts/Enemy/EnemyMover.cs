@@ -13,8 +13,8 @@ public class EnemyMover : MonoBehaviour
     NavMeshAgent nav;
     // Reference to the nav mesh agent.
 
-    [Header("Components")]
-    public Transform[] Components;
+    [Header("Attribute")]
+    public float speed;
 
     void Awake ()
     {
@@ -60,7 +60,6 @@ public class EnemyMover : MonoBehaviour
     {
         RandomDeadAnimation();
         int i = 0;
-        if (Components != null)
         
         while (true)
         {
