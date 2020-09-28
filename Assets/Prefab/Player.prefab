@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 177130719096780448}
   - component: {fileID: 8614217542712165123}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player Position
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521590936687659072}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -153,15 +153,15 @@ RectTransform:
   m_GameObject: {fileID: 3135417127839900616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4568209405169619534}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -289.2, y: 134}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -372, y: 134}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8257000298266010495
 CanvasRenderer:
@@ -192,11 +192,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 1
+    m_FontSize: 42
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 159
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5656,6 +5656,7 @@ GameObject:
   - component: {fileID: 7390931757668856781}
   - component: {fileID: 7390931757668856778}
   - component: {fileID: 7390931757668856780}
+  - component: {fileID: 5138296622310731520}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5719,8 +5720,21 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  jumpHeight: 2
+  jumpHeight: 1
   controller: {fileID: 7390931757668856778}
+--- !u!114 &5138296622310731520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390931757668856779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46fd84ca0e963c439c892b0d1446a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthText: {fileID: 7497365331180639165}
 --- !u!1 &7390931758347097345
 GameObject:
   m_ObjectHideFlags: 0
