@@ -32,6 +32,17 @@ public class EnemyMover : MonoBehaviour
 
     void Update ()
     {
+        if (player != null)
+        {
+            if ((this.transform.position - player.position).sqrMagnitude < 3f)
+            {
+                nav.speed = 0;
+            }
+            else
+            {
+                nav.speed = this.speed;
+            }
+        }
         // Set the destination of the nav mesh agent to the player.
         if (player != null)
             nav.SetDestination (player.position);
