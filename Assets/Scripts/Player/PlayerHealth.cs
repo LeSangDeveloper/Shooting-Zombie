@@ -12,6 +12,10 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("test dame");
         health -= dame;
         HealthText.text = health.ToString();
+        if (health <= 0)
+        {
+            GameManager.Instance.GameOver(this.gameObject);
+        }
     }
 
 }
