@@ -1,2 +1,2 @@
 # Shooting-Zombie
-Develope game in Unity
+Develop game in Unity
