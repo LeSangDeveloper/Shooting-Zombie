@@ -20,7 +20,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     public GameState gameState;
 
-
+    public EnemySpawner EnemySpawner;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +55,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     IEnumerator CR_PrepareGame()
     {
+        Time.timeScale = 1;
         Debug.Log(this.gameObject); 
         Instantiate(playerPrefab, new Vector3(0.0f, 3.25f, 0.0f), playerPrefab.transform.rotation);
         gameState = GameState.Playing;       
@@ -66,9 +67,9 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.ShowingScreen(ScreenType.Playing);
         Cursor.visible = false;
         yield return new WaitForSeconds(5.0f);
+        EnemySpawner.StartSpawn();
         while (gameState == GameState.Playing)
         {
-            Instantiate(EnemyPrefab, new Vector3(-12, -4.91f, -3.32f), Quaternion.identity);
             yield return new WaitForSeconds(5.0f);
         }
         yield return null;
@@ -77,7 +78,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     IEnumerator CR_PreFinish()
     {
-
         yield return null;
     }
 
@@ -94,5 +94,15 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.ShowingScreen(ScreenType.Pause);
     }
 
+    public void GameOver(GameObject player)
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        EnemySpawner.StopSpawn();
+        Time.timeScale = 0;
+        gameState = GameState.Exit;
+        Destroy(player);
+        UIManager.ShowingScreen(ScreenType.Launch);
+    }
 
 }
