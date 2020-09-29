@@ -1858,6 +1858,7 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 8410498132133402566, guid: 63e87395130e41f40a1cf20db7ddb161,
     type: 3}
   gameState: 0
+  EnemySpawner: {fileID: 1895087886}
 --- !u!1 &2116225998
 GameObject:
   m_ObjectHideFlags: 0
