@@ -55,6 +55,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     IEnumerator CR_PrepareGame()
     {
+        Time.timeScale = 1;
         Debug.Log(this.gameObject); 
         Instantiate(playerPrefab, new Vector3(0.0f, 3.25f, 0.0f), playerPrefab.transform.rotation);
         gameState = GameState.Playing;       
@@ -95,10 +96,13 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void GameOver(GameObject player)
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         EnemySpawner.StopSpawn();
         Time.timeScale = 0;
         gameState = GameState.Exit;
         Destroy(player);
+        UIManager.ShowingScreen(ScreenType.Launch);
     }
 
 }
