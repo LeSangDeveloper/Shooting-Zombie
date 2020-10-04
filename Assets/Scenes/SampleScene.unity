@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 46938298}
   - component: {fileID: 46938301}
   m_Layer: 8
-  m_Name: Cube (2)
+  m_Name: East
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,8 +149,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46938296}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2, y: -2.35, z: -18.2}
-  m_LocalScale: {x: 1, y: 5, z: 49.7}
+  m_LocalPosition: {x: 2, y: -2.35, z: -43.3}
+  m_LocalScale: {x: 1, y: 5, z: 90}
   m_Children: []
   m_Father: {fileID: 656845890}
   m_RootOrder: 2
@@ -175,7 +175,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46938296}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 613655138}
   - component: {fileID: 613655137}
   m_Layer: 8
-  m_Name: Cube (3)
+  m_Name: West
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,8 +490,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613655135}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.92, y: -2.5, z: 30.02}
-  m_LocalScale: {x: 1, y: 5, z: 47.3}
+  m_LocalPosition: {x: 1.9, y: -2.5, z: 54.3}
+  m_LocalScale: {x: 1, y: 5, z: 90}
   m_Children: []
   m_Father: {fileID: 656845890}
   m_RootOrder: 3
@@ -516,7 +516,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613655135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 1266289421}
   - component: {fileID: 1266289420}
   m_Layer: 8
-  m_Name: Cube (1)
+  m_Name: North
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1106,8 +1106,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266289418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.07, y: -2.5, z: 6.64}
-  m_LocalScale: {x: 1, y: 5, z: -48.3}
+  m_LocalPosition: {x: 50.4, y: -2.5, z: 6.64}
+  m_LocalScale: {x: 1, y: 5, z: -100}
   m_Children: []
   m_Father: {fileID: 656845890}
   m_RootOrder: 1
@@ -1132,7 +1132,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266289418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1328,7 +1328,7 @@ GameObject:
   - component: {fileID: 1816941171}
   - component: {fileID: 1816941170}
   m_Layer: 8
-  m_Name: Cube
+  m_Name: South
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1342,8 +1342,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816941168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.62, y: -2.5, z: 6.1}
-  m_LocalScale: {x: 1, y: 5, z: 47.1}
+  m_LocalPosition: {x: -46.8, y: -2.5, z: 6.1}
+  m_LocalScale: {x: 1, y: 5, z: 100}
   m_Children: []
   m_Father: {fileID: 656845890}
   m_RootOrder: 0
@@ -1368,7 +1368,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816941168}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 1908735557}
   - component: {fileID: 1908735556}
   m_Layer: 8
-  m_Name: Plane
+  m_Name: Round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1541,7 +1541,7 @@ Transform:
   m_GameObject: {fileID: 1908735555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 10, y: 5, z: 10}
   m_Children: []
   m_Father: {fileID: 1944616107}
   m_RootOrder: 1
