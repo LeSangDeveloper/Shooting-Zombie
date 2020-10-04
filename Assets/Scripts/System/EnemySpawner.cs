@@ -8,6 +8,8 @@ public class EnemySpawner :  MonoBehaviour
 
     List<GameObject> enemies;
 
+    public Transform[] SpawnerPoint;
+
     void Awake()
     {
         enemies = new List<GameObject>();
@@ -32,11 +34,21 @@ public class EnemySpawner :  MonoBehaviour
 
     }
 
+    Transform RandomPoint()
+    {
+        Transform result;
+        System.Random random = new System.Random();
+        int temp = random.Next(0, 8);
+        result = SpawnerPoint[temp];
+        return result;
+    }
+
     IEnumerator CR_Spawn()
     {
         while (true)
         {
-            enemies.Add(Instantiate(Enemy, new Vector3(-12, -4.91f, -3.32f), Quaternion.identity));
+            Transform temp = RandomPoint();
+            enemies.Add(Instantiate(Enemy, temp.position, Quaternion.identity));
             yield return new WaitForSeconds(5.0f);
         }
     }
