@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log(healthSlider.value);
         if (health <= 0)
         {
+            healthSlider.gameObject.SetActive(false);
             EnemyMover enemyMover = this.gameObject.GetComponent<EnemyMover>();
             enemyMover.Dead();
         }
