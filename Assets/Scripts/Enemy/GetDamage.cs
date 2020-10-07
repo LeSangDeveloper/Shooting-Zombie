@@ -4,6 +4,8 @@ public class GetDamage : MonoBehaviour
 {
     public int dame = 1;
 
+    public ParticleSystem BloodEffect;
+
     Transform fullBody;
 
     void Awake()
@@ -16,7 +18,9 @@ public class GetDamage : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             EnemyHealth temp = fullBody.GetComponent<EnemyHealth>();
-        
+
+            BloodEffect.Play();
+
             if (temp != null)
             {
                 temp.SubtractHealth(dame);

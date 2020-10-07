@@ -9,6 +9,9 @@ TagManager:
   - ExplosiveBarrel
   - Undefined
   - Bullet
+  - Concrete
+  - Dirt
+  - Blood
   layers:
   - Default
   - TransparentFX
