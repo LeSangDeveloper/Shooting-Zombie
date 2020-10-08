@@ -18975,6 +18975,7 @@ GameObject:
   - component: {fileID: 6938365115589646289}
   - component: {fileID: 6935134482129474985}
   - component: {fileID: 6934826175990920309}
+  - component: {fileID: 8340283028450633757}
   m_Layer: 8
   m_Name: arms_assault_rifle_01
   m_TagString: Untagged
@@ -19210,6 +19211,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &8340283028450633757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6998358016405481199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7dd850e51a575a4d94e038e8602b8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootAudioSource: {fileID: 6935134482129474985}
+  mainAudioSource: {fileID: 6935134482129474985}
+  fpsCam: {fileID: 7671392116748053302}
+  damage: 10
+  ammo: 6
+  UIGunInformation: {fileID: 940218858941280500}
+  ammoQuantity: {fileID: 1180278690428369558}
+  GunName: {fileID: 696608808354967077}
+  muzzleFlash: {fileID: 6661812702229753092}
+  SparkFlash: {fileID: 8020431434335196336}
+  bulletPrefab: {fileID: 6539489494617940334, guid: 00c6779b478f4de418ddc9ddc51f8466,
+    type: 3}
+  SpawnBulletPoint: {fileID: 6997441559267595495}
+  soundClips:
+    shootSound: {fileID: 0}
+    silencerShootSound: {fileID: 0}
+    reloadSoundOutOfAmmo: {fileID: 0}
+    reloadSoundAmmoLeft: {fileID: 0}
 --- !u!1 &7390931756474521743
 GameObject:
   m_ObjectHideFlags: 0
