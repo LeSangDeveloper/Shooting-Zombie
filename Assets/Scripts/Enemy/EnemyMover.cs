@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class EnemyMover : MonoBehaviour
 {
 
+    // Để enemy không dí theo lúc nằm xuống
     bool isDead = false;
     bool lockAttack = false;
     public Transform PlayerPosition;
@@ -126,7 +127,7 @@ public class EnemyMover : MonoBehaviour
         yield return null;
     }
 
-    public void subtractHealth(int dame)
+    public void Dead()
     {
         isDead = true;
         nav.enabled = false;

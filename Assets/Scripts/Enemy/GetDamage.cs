@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class GetDamage : MonoBehaviour
 {
-    int dame = 1;
+    public int dame = 1;
+
+    public ParticleSystem BloodEffect;
 
     Transform fullBody;
 
@@ -15,11 +17,13 @@ public class GetDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            EnemyMover temp = fullBody.GetComponent<EnemyMover>();
-        
+            EnemyHealth temp = fullBody.GetComponent<EnemyHealth>();
+
+            BloodEffect.Play();
+
             if (temp != null)
             {
-                temp.subtractHealth(dame);
+                temp.SubtractHealth(dame);
             }
         }
     }
