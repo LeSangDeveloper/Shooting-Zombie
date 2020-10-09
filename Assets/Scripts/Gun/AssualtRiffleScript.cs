@@ -69,7 +69,7 @@ public class AssualtRiffleScript : MonoBehaviour
 
         AnimationCheck();
 
-        if (Input.GetButtonDown(FireButton) && !isReloading)
+        if (Input.GetMouseButton(0) && !isReloading)
         {
             Shoot();
         }
