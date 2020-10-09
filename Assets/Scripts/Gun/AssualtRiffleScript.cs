@@ -118,7 +118,7 @@ public class AssualtRiffleScript : MonoBehaviour
             shootAudioSource.Play();
             currentAmmo--;
             ammoQuantity.text = currentAmmo.ToString();
-             GameObject bullet = Instantiate(bulletPrefab, SpawnBulletPoint.transform.position, SpawnBulletPoint.transform.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, SpawnBulletPoint.transform.position, SpawnBulletPoint.transform.rotation);
             bullet.transform.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 1000;
             // RaycastHit hit;
 
@@ -141,7 +141,8 @@ public class AssualtRiffleScript : MonoBehaviour
 
             if (!isWalking)
             {
-                muzzleFlash.Emit(1);
+                muzzleFlash.Emit(10);
+                Debug.Log("Mezzle");
                 SparkFlash.Emit(Random.Range(1, 6));
             }
         }
