@@ -11623,6 +11623,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6539489494617940334, guid: 00c6779b478f4de418ddc9ddc51f8466,
     type: 3}
   SpawnBulletPoint: {fileID: 5667059992282606674}
+  CasingPrefab: {fileID: 5604142612348011556, guid: fcb8fbd927cf1804a86b1c96a759bf0e,
+    type: 3}
+  CasingSpawnPoint: {fileID: 5665606387657938390}
   soundClips:
     shootSound: {fileID: 0}
     silencerShootSound: {fileID: 0}
@@ -13507,7 +13510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5666957585967721020}
   m_LocalRotation: {x: 0.00000011920929, y: 7.536443e-14, z: -4.5218674e-14, w: 1}
-  m_LocalPosition: {x: -0.168, y: -0.925, z: 0.925}
+  m_LocalPosition: {x: -0.168, y: -0.932, z: 0.853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5672243371656168608}

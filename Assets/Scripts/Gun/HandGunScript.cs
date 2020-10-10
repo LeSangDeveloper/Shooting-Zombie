@@ -59,6 +59,7 @@ public class HandGunScript : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        currentAmmo = ammo;
     }
 
     void Update()

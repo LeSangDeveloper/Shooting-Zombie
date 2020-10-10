@@ -43,7 +43,11 @@ public class AssualtRiffleScript : MonoBehaviour
     GameObject bulletPrefab;
     [SerializeField]
     GameObject SpawnBulletPoint;
-    
+    [SerializeField]
+    GameObject CasingPrefab;
+    [SerializeField]
+    GameObject CasingSpawnPoint;
+
     [System.Serializable]
 	public class SoundClips
 	{
@@ -62,6 +66,7 @@ public class AssualtRiffleScript : MonoBehaviour
    void Start()
     {
         animator = GetComponent<Animator>();
+        currentAmmo = ammo;
     }
 
     void Update()
@@ -149,6 +154,10 @@ public class AssualtRiffleScript : MonoBehaviour
                 Debug.Log("Mezzle");
                 SparkFlash.Emit(Random.Range(1, 6));
             }
+
+				//Spawn casing prefab at spawnpoint
+			// Instantiate(CasingPrefab, CasingSpawnPoint.transform.position, CasingSpawnPoint.transform.rotation);
+
         }
 
         if (currentAmmo <= 0)
