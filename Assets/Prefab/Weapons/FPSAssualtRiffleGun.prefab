@@ -287,7 +287,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pislot P223
+  m_Text: AK-47
 --- !u!1 &4336707331738923190
 GameObject:
   m_ObjectHideFlags: 0
@@ -5105,7 +5105,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6
+  m_Text: 30
 --- !u!1 &4701593875065007269
 GameObject:
   m_ObjectHideFlags: 0
@@ -11613,9 +11613,10 @@ MonoBehaviour:
   mainAudioSource: {fileID: 5728601947838459164}
   fpsCam: {fileID: 5028510274401440643}
   damage: 10
-  ammo: 6
+  ammo: 30
+  rate: 5
   UIGunInformation: {fileID: 2500286270101981249}
-  ammoQuantity: {fileID: 0}
+  ammoQuantity: {fileID: 6545308955946771603}
   GunName: {fileID: 2743891786240988816}
   muzzleFlash: {fileID: 4533151324571423974}
   SparkFlash: {fileID: 5274736258700486736}

@@ -12,6 +12,7 @@ public class AssualtRiffleScript : MonoBehaviour
     bool isReloading = false;
     string FireButton = "Fire1";
     int currentAmmo = 6;
+    float lastFired = 0;
 
     public AudioSource shootAudioSource;
     public AudioSource mainAudioSource;
@@ -25,6 +26,8 @@ public class AssualtRiffleScript : MonoBehaviour
     //float range = 100f;
     [SerializeField]
     int ammo = 6;
+    [SerializeField]
+    int rate = 1;
 
     [Header("Canvas Information Gun")]
     public Canvas UIGunInformation;
@@ -112,8 +115,9 @@ public class AssualtRiffleScript : MonoBehaviour
     void Shoot()
     {
 
-        if (!isOutOfAmmo)
+        if (!isOutOfAmmo && (Time.time - lastFired > (1f / rate)))
         {
+            lastFired = Time.time;
             shootAudioSource.clip = soundClips.shootSound;
             shootAudioSource.Play();
             currentAmmo--;
