@@ -13,7 +13,7 @@ public class AssualtRiffleScript : MonoBehaviour
     string FireButton = "Fire1";
     int currentAmmo = 6;
     float lastFired = 0;
-
+    Light LightBullet;
     public AudioSource shootAudioSource;
     public AudioSource mainAudioSource;
     [Header("Gun camera")]
@@ -47,6 +47,8 @@ public class AssualtRiffleScript : MonoBehaviour
     GameObject CasingPrefab;
     [SerializeField]
     GameObject CasingSpawnPoint;
+    [SerializeField]
+    GameObject LightPoint;
 
     [System.Serializable]
 	public class SoundClips
@@ -67,6 +69,7 @@ public class AssualtRiffleScript : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         currentAmmo = ammo;
+        LightBullet = LightPoint.GetComponent<Light>();
     }
 
     void Update()
@@ -80,6 +83,10 @@ public class AssualtRiffleScript : MonoBehaviour
         if (Input.GetMouseButton(0) && !isReloading)
         {
             Shoot();
+        }
+        else
+        {
+            LightBullet.enabled = false;
         }
 
         if (Input.GetMouseButton(1) && !isReloading)
@@ -122,6 +129,7 @@ public class AssualtRiffleScript : MonoBehaviour
 
         if (!isOutOfAmmo && (Time.time - lastFired > (1f / rate)))
         {
+            LightBullet.enabled = true;
             lastFired = Time.time;
             shootAudioSource.clip = soundClips.shootSound;
             shootAudioSource.Play();
@@ -156,8 +164,12 @@ public class AssualtRiffleScript : MonoBehaviour
             }
 
 				//Spawn casing prefab at spawnpoint
-			// Instantiate(CasingPrefab, CasingSpawnPoint.transform.position, CasingSpawnPoint.transform.rotation);
+			Instantiate(CasingPrefab, CasingSpawnPoint.transform.position, CasingSpawnPoint.transform.rotation);
 
+        }
+        else
+        {
+            LightBullet.enabled = false;
         }
 
         if (currentAmmo <= 0)

@@ -13,6 +13,7 @@ public class HandGunScript : MonoBehaviour
     bool isReloading = false;
     string FireButton = "Fire1";
     int currentAmmo = 6;
+    Light LightBullet;
 
     public AudioSource shootAudioSource;
     public AudioSource mainAudioSource;
@@ -45,6 +46,8 @@ public class HandGunScript : MonoBehaviour
     GameObject casingPrefab;
     [SerializeField]
     GameObject SpawnCasingPoint;
+    [SerializeField]
+    GameObject LightPoint;
 
     [System.Serializable]
 	public class SoundClips
@@ -64,6 +67,7 @@ public class HandGunScript : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         currentAmmo = ammo;
+        LightBullet = LightPoint.GetComponent<Light>();
     }
 
     void Update()
@@ -77,6 +81,10 @@ public class HandGunScript : MonoBehaviour
         if (Input.GetButtonDown(FireButton) && !isReloading)
         {
             Shoot();
+        }
+        else
+        {
+            LightBullet.enabled = false;
         }
 
         if (Input.GetMouseButton(1) && !isReloading)
@@ -119,6 +127,7 @@ public class HandGunScript : MonoBehaviour
 
         if (!isOutOfAmmo)
         {
+            LightBullet.enabled = true;
             shootAudioSource.clip = soundClips.shootSound;
             shootAudioSource.Play();
             currentAmmo--;
@@ -143,6 +152,10 @@ public class HandGunScript : MonoBehaviour
                 muzzleFlash.Emit(1);
                 SparkFlash.Emit(Random.Range(1, 6));
             }
+        }
+        else
+        {
+            LightBullet.enabled = false;
         }
 
         if (currentAmmo <= 0)

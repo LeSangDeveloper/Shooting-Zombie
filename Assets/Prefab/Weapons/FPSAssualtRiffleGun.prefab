@@ -11626,11 +11626,15 @@ MonoBehaviour:
   CasingPrefab: {fileID: 5604142612348011556, guid: fcb8fbd927cf1804a86b1c96a759bf0e,
     type: 3}
   CasingSpawnPoint: {fileID: 5665606387657938390}
+  LightPoint: {fileID: 5666957585967721020}
   soundClips:
-    shootSound: {fileID: 0}
-    silencerShootSound: {fileID: 0}
-    reloadSoundOutOfAmmo: {fileID: 0}
-    reloadSoundAmmoLeft: {fileID: 0}
+    shootSound: {fileID: 8300000, guid: 38b450e2adcb6f542acc8c1d423bd8dc, type: 3}
+    silencerShootSound: {fileID: 8300000, guid: 7a6fab501ce3e9b439562b3e301c770c,
+      type: 3}
+    reloadSoundOutOfAmmo: {fileID: 8300000, guid: 5b907074256e36d41b92e89fb0790633,
+      type: 3}
+    reloadSoundAmmoLeft: {fileID: 8300000, guid: f7ce534a0633b9847910ba117e2245d1,
+      type: 3}
 --- !u!1 &5666114914266174556
 GameObject:
   m_ObjectHideFlags: 0
@@ -13510,7 +13514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5666957585967721020}
   m_LocalRotation: {x: 0.00000011920929, y: 7.536443e-14, z: -4.5218674e-14, w: 1}
-  m_LocalPosition: {x: -0.168, y: -0.932, z: 0.853}
+  m_LocalPosition: {x: -0.168, y: -0.981, z: 0.635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5672243371656168608}

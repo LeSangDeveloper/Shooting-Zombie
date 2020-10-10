@@ -516,6 +516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSHandGun
       objectReference: {fileID: 0}
+    - target: {fileID: 3780855384797297368, guid: 13f18a20c53f61c4e8061b8c9d1bc8b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4073900864580982189, guid: 13f18a20c53f61c4e8061b8c9d1bc8b5,
         type: 3}
       propertyPath: playerBody
