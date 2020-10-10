@@ -41,7 +41,11 @@ public class HandGunScript : MonoBehaviour
     GameObject bulletPrefab;
     [SerializeField]
     GameObject SpawnBulletPoint;
-    
+    [SerializeField]
+    GameObject casingPrefab;
+    [SerializeField]
+    GameObject SpawnCasingPoint;
+
     [System.Serializable]
 	public class SoundClips
 	{
@@ -121,14 +125,8 @@ public class HandGunScript : MonoBehaviour
             ammoQuantity.text = currentAmmo.ToString();
              GameObject bullet = Instantiate(bulletPrefab, SpawnBulletPoint.transform.position, SpawnBulletPoint.transform.rotation);
             bullet.transform.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 1000;
-            // RaycastHit hit;
-
-            // if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
-            // {
-            //     Debug.Log(hit.transform.name);
-            // }
-
             
+            Instantiate(casingPrefab, SpawnCasingPoint.transform.position, SpawnCasingPoint.transform.rotation);
 
             if (!isAiming)
             {
@@ -149,6 +147,7 @@ public class HandGunScript : MonoBehaviour
 
         if (currentAmmo <= 0)
             isOutOfAmmo = true;
+
     }
 
     void Reload()
