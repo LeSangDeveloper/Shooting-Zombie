@@ -10415,7 +10415,7 @@ GameObject:
   - component: {fileID: 4073900863257077873}
   m_Layer: 0
   m_Name: knife 1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11856,6 +11856,8 @@ GameObject:
   - component: {fileID: 4108432160663721750}
   - component: {fileID: 4073900862947360681}
   - component: {fileID: 4073900862947360693}
+  - component: {fileID: 4659320380058466596}
+  - component: {fileID: 8532074966875987854}
   m_Layer: 0
   m_Name: arms_handgun_01
   m_TagString: Untagged
@@ -12127,6 +12129,35 @@ MonoBehaviour:
       type: 3}
     reloadSoundAmmoLeft: {fileID: 8300000, guid: 94ceb27b33ad8fc44b0ceee339ba09b1,
       type: 3}
+--- !u!65 &4659320380058466596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073900863251866997}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09385127, y: 0.13321894, z: 0.25111192}
+  m_Center: {x: -0.018100142, y: 0.07831016, z: 0.57102656}
+--- !u!54 &8532074966875987854
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073900863251866997}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4073900863251866999
 GameObject:
   m_ObjectHideFlags: 0

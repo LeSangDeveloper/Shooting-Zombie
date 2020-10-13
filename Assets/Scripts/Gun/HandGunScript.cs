@@ -85,6 +85,10 @@ public class HandGunScript : MonoBehaviour
         else
         {
             LightBullet.enabled = false;
+            if (Input.GetKey(KeyCode.Q))
+            {
+                animator.Play("Knife Attack 1");
+            }
         }
 
         if (Input.GetMouseButton(1) && !isReloading)
@@ -183,6 +187,21 @@ public class HandGunScript : MonoBehaviour
 		currentAmmo = ammo;
         ammoQuantity.text = currentAmmo.ToString();
         isOutOfAmmo = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(" collider " + other);
+
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Knife Attack 1"))
+        {
+            GetDamage dame = other.GetComponent<GetDamage>();
+            if (dame != null)
+            {
+                dame.ProcessDame(5);
+            }
+        }
+
     }
 
     private void AnimationCheck () 

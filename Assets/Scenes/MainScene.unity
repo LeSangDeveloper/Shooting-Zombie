@@ -1418,13 +1418,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: -0.73727983, y: -0.2631842, z: -0.1614423, w: 0.6009068}
+  m_LocalRotation: {x: 0.8025553, y: 0.47459555, z: -0.36143804, w: -0.0051584244}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -103.82, y: 19.12, z: -54.33}
+  m_LocalEulerAnglesHint: {x: 160.44, y: 38.38, z: -54.33}
 --- !u!1 &746844639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,7 +3928,7 @@ GameObject:
   - component: {fileID: 1908735556}
   m_Layer: 8
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Concrete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4045,7 +4045,7 @@ GameObject:
   - component: {fileID: 1944616107}
   m_Layer: 8
   m_Name: Environment
-  m_TagString: Untagged
+  m_TagString: Concrete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

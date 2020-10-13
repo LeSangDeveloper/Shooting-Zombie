@@ -8,10 +8,10 @@ public class EnemyHealth : MonoBehaviour
     public Slider healthSlider; 
     public void SubtractHealth(int dame)
     {
-        Debug.Log(dame);
+
         health -= dame;
         healthSlider.value = health / 100;
-        Debug.Log(healthSlider.value);
+
         if (health <= 0)
         {
             healthSlider.gameObject.SetActive(false);
