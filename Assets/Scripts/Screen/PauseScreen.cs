@@ -7,11 +7,20 @@ public class PauseScreen : GameScreen
 {
     [SerializeField]
     Button btnQuit;
+    
+    [SerializeField]
+    Button btnResume;
     protected override void Awake()
     {
         base.Awake();
         type = ScreenType.Pause;
         btnQuit.onClick.AddListener(QuitGame);
+        btnResume.onClick.AddListener(ResumeGame);
+    }
+
+    public void ResumeGame()
+    {
+        GameManager.Instance.ResumeGame();
     }
 
     public void QuitGame()

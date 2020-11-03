@@ -94,6 +94,14 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.ShowingScreen(ScreenType.Pause);
     }
 
+    public void ResumeGame()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+        UIManager.ShowingScreen(ScreenType.Playing);
+    }
+
     public void GameOver(GameObject player)
     {
         Cursor.lockState = CursorLockMode.Confined;
