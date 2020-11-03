@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class HandGunScript : MonoBehaviour
+public class AssualtRiffleScript : MonoBehaviour
 {
-
-    Animator animator;
+        Animator animator;
 
     bool isOutOfAmmo = false;
     bool isWalking = false;
@@ -13,8 +12,8 @@ public class HandGunScript : MonoBehaviour
     bool isReloading = false;
     string FireButton = "Fire1";
     int currentAmmo = 6;
+    float lastFired = 0;
     Light LightBullet;
-
     public AudioSource shootAudioSource;
     public AudioSource mainAudioSource;
     [Header("Gun camera")]
@@ -27,6 +26,8 @@ public class HandGunScript : MonoBehaviour
     //float range = 100f;
     [SerializeField]
     int ammo = 6;
+    [SerializeField]
+    int rate = 1;
 
     [Header("Canvas Information Gun")]
     public Canvas UIGunInformation;
@@ -43,9 +44,9 @@ public class HandGunScript : MonoBehaviour
     [SerializeField]
     GameObject SpawnBulletPoint;
     [SerializeField]
-    GameObject casingPrefab;
+    GameObject CasingPrefab;
     [SerializeField]
-    GameObject SpawnCasingPoint;
+    GameObject CasingSpawnPoint;
     [SerializeField]
     GameObject LightPoint;
 
@@ -63,7 +64,8 @@ public class HandGunScript : MonoBehaviour
 	}
 	public SoundClips soundClips;
 
-    void Start()
+    // Start is called before the first frame update
+   void Start()
     {
         animator = GetComponent<Animator>();
         currentAmmo = ammo;
@@ -78,17 +80,13 @@ public class HandGunScript : MonoBehaviour
 
         AnimationCheck();
 
-        if (Input.GetButtonDown(FireButton) && !isReloading)
+        if (Input.GetMouseButton(0) && !isReloading)
         {
             Shoot();
         }
         else
         {
             LightBullet.enabled = false;
-            if (Input.GetKey(KeyCode.Q))
-            {
-                animator.Play("GrenadeThrow");
-            }
         }
 
         if (Input.GetMouseButton(1) && !isReloading)
@@ -129,17 +127,24 @@ public class HandGunScript : MonoBehaviour
     void Shoot()
     {
 
-        if (!isOutOfAmmo)
+        if (!isOutOfAmmo && (Time.time - lastFired > (1f / rate)))
         {
             LightBullet.enabled = true;
+            lastFired = Time.time;
             shootAudioSource.clip = soundClips.shootSound;
             shootAudioSource.Play();
             currentAmmo--;
             ammoQuantity.text = currentAmmo.ToString();
-             GameObject bullet = Instantiate(bulletPrefab, SpawnBulletPoint.transform.position, SpawnBulletPoint.transform.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, SpawnBulletPoint.transform.position, SpawnBulletPoint.transform.rotation);
             bullet.transform.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 1000;
+            // RaycastHit hit;
+
+            // if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+            // {
+            //     Debug.Log(hit.transform.name);
+            // }
+
             
-            Instantiate(casingPrefab, SpawnCasingPoint.transform.position, SpawnCasingPoint.transform.rotation);
 
             if (!isAiming)
             {
@@ -153,9 +158,14 @@ public class HandGunScript : MonoBehaviour
 
             if (!isWalking)
             {
-                muzzleFlash.Emit(1);
+                muzzleFlash.Emit(10);
+                Debug.Log("Mezzle");
                 SparkFlash.Emit(Random.Range(1, 6));
             }
+
+				//Spawn casing prefab at spawnpoint
+			Instantiate(CasingPrefab, CasingSpawnPoint.transform.position, CasingSpawnPoint.transform.rotation);
+
         }
         else
         {
@@ -164,7 +174,6 @@ public class HandGunScript : MonoBehaviour
 
         if (currentAmmo <= 0)
             isOutOfAmmo = true;
-
     }
 
     void Reload()
@@ -187,21 +196,6 @@ public class HandGunScript : MonoBehaviour
 		currentAmmo = ammo;
         ammoQuantity.text = currentAmmo.ToString();
         isOutOfAmmo = false;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(" collider " + other);
-
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("GrenadeThrow"))
-        {
-            GetDamage dame = other.GetComponent<GetDamage>();
-            if (dame != null)
-            {
-                dame.ProcessDame(5);
-            }
-        }
-
     }
 
     private void AnimationCheck () 
