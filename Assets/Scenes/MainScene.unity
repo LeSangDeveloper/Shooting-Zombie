@@ -3415,6 +3415,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[0]
+      value: 
+      objectReference: {fileID: 1217786587}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[1]
+      value: 
+      objectReference: {fileID: 329863616}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[2]
+      value: 
+      objectReference: {fileID: 1312952909}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[3]
+      value: 
+      objectReference: {fileID: 2141608855}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[4]
+      value: 
+      objectReference: {fileID: 1069518353}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[5]
+      value: 
+      objectReference: {fileID: 1485852010}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[6]
+      value: 
+      objectReference: {fileID: 552050630}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: SpawnerPoint.Array.data[7]
+      value: 
+      objectReference: {fileID: 1409412928}
+    - target: {fileID: 1228468001880437741, guid: a470c014c0e62a64e8dac0547a5e929f,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 8410498132133402566, guid: 63e87395130e41f40a1cf20db7ddb161,
+        type: 3}
     - target: {fileID: 4685029381963280890, guid: a470c014c0e62a64e8dac0547a5e929f,
         type: 3}
       propertyPath: m_Name
