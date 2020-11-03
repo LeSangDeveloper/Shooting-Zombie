@@ -22,10 +22,23 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 2f; 
 
     public CharacterController controller;
-
+    public GameObject Weapon1;
+    public GameObject Weapon2;
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Weapon2.SetActive(false);
+            Weapon1.SetActive(true);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Weapon1.SetActive(false);
+            Weapon2.SetActive(true);
+        }
+
         if (GameManager.Instance.gameState != GameState.Playing)
             return;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
