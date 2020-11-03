@@ -30480,6 +30480,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 3233083733944803001}
+  EnemiesBlood:
+  - {fileID: 8410498132133402600}
+  - {fileID: 8410498132133402590}
+  - {fileID: 8410498132133402586}
+  - {fileID: 8410498132133402584}
+  - {fileID: 8410498132133402570}
+  - {fileID: 8410498132133402568}
 --- !u!1 &8410498132133402568
 GameObject:
   m_ObjectHideFlags: 0

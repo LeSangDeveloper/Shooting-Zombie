@@ -87,7 +87,7 @@ public class HandGunScript : MonoBehaviour
             LightBullet.enabled = false;
             if (Input.GetKey(KeyCode.Q))
             {
-                animator.Play("Knife Attack 1");
+                animator.Play("GrenadeThrow");
             }
         }
 
@@ -193,7 +193,7 @@ public class HandGunScript : MonoBehaviour
     {
         Debug.Log(" collider " + other);
 
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Knife Attack 1"))
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("GrenadeThrow"))
         {
             GetDamage dame = other.GetComponent<GetDamage>();
             if (dame != null)

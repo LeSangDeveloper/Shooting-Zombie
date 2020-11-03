@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     private float health = 100f;
-    public Slider healthSlider; 
+    public Slider healthSlider;
+    public List<GameObject> EnemiesBlood; 
     public void SubtractHealth(int dame)
     {
 
@@ -17,6 +18,11 @@ public class EnemyHealth : MonoBehaviour
             healthSlider.gameObject.SetActive(false);
             EnemyMover enemyMover = this.gameObject.GetComponent<EnemyMover>();
             enemyMover.Dead();
+            foreach(GameObject temp in EnemiesBlood)
+            {
+                BoxCollider box = temp.GetComponent<BoxCollider>();
+                box.enabled = false;
+            }
         }
     }
 }
